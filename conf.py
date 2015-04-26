@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Socloz.com documentation build configuration file, created by
+# documentation build configuration file, created by
 # sphinx-quickstart on Wed Dec  3 10:05:48 2014.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -22,7 +22,6 @@ sys.path.append(os.path.abspath('./_exts/httpdomain'))
 
 from sphinx.highlighting import lexers
 from pygments.lexers.compiled import CLexer
-from pygments.lexers.web import PhpLexer
 
 # -- General configuration -----------------------------------------------------
 
@@ -32,7 +31,6 @@ from pygments.lexers.web import PhpLexer
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo', 'sphinxcontrib.httpdomain', 'sphinx.ext.graphviz']
-
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -44,8 +42,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Socloz.com'
-copyright = u'2014, CloseToMe'
+project = u'-.com'
+copyright = u'2014, -'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -217,13 +215,12 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'soclozcom', u'Socloz.com Documentation',
-     [u'CloseToMe'], 1)
+    ('index', 'MiniWaveMe', u'miniwave.me Documentation',
+     [u'-'], 1)
 ]
 
 # If true, show URL addresses after external links.
 #man_show_urls = False
-
 
 # -- Options for Texinfo output ------------------------------------------------
 
@@ -231,8 +228,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Soclozcom', u'Socloz.com Documentation',
-   u'CloseToMe', 'Soclozcom', 'One line description of project.',
+  ('index', 'MiniWaveMe', u'miniwave.com Documentation',
+   u'MiniWaveMe', 'MiniWaveMe', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -244,4 +241,8 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+html_static_path = ['./_static']
+html_theme = "_theme"
+html_theme_path= ["./"]
 

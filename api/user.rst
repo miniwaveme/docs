@@ -1,21 +1,24 @@
 User
 ====
 
+Retrieve user
+-------------
+
 .. http:get:: /user/(string:user_id)
+    :noindex:
+    :synopsis: Retrieve information about a user
 
-   Retreive information about a user
+    **Example request**:
 
-   **Example request**:
+    .. sourcecode:: http
 
-   .. sourcecode:: http
+        GET /track/ab6d4b6287fc HTTP/1.1
+        Host: example.com
+        Accept: application/json, text/javascript
 
-      GET /track/ab6d4b6287fc HTTP/1.1
-      Host: example.com
-      Accept: application/json, text/javascript
+    **Example response**:
 
-   **Example response**:
-
-   .. sourcecode:: http
+    .. sourcecode:: http
 
         HTTP/1.1 200 OK
         Vary: Accept
@@ -31,8 +34,6 @@ User
             "lastname": "horcholle"
         }
 
-
-   :query artist_id: user id
-   :statuscode 200: no error
-   :statuscode 404: there's no user
-   
+    :query user_id: user id
+    :statuscode 200: no error
+    :statuscode 404: there's no user
