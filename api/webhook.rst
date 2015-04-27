@@ -98,7 +98,7 @@ Remove user webhooks
 Add user webhooks
 -----------------
 
-.. http:post:: /user/(string:user_id)/webhook/(string:webhook_id)
+.. http:put:: /user/(string:user_id)/webhook/(string:webhook_id)
     :noindex:
     :synopsis: Add user webhook
 
@@ -106,7 +106,7 @@ Add user webhooks
 
     .. sourcecode:: http
 
-        POST /user/ab6d4b6287fc/webhook/6d4abbc HTTP/1.1
+        PUT /user/ab6d4b6287fc/webhook/6d4abbc HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 
@@ -119,7 +119,8 @@ Add user webhooks
         Content-Type: text/javascript
 
         {
-            "success": true
+            "success": true,
+            "id": d4b62
         }
 
     :query user_id: user id

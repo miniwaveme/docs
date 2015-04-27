@@ -52,7 +52,40 @@ Add track to user favorite
 
     .. sourcecode:: http
 
-        PUT /user/playlist/ab6d4b6287fc/4b6287rf5 HTTP/1.1
+        PUT /user/ab6d4b6287fc/favorite/4b6287rf5 HTTP/1.1
+        Host: example.com
+        Accept: application/json, text/javascript
+
+    **Example response**:
+
+    .. sourcecode:: http
+
+        HTTP/1.1 200 OK
+        Vary: Accept
+        Content-Type: text/javascript
+
+        {
+            "success": true
+            "id": 4b6287rf5
+        }
+
+    :query user_id: user id
+    :query track_id: track id
+    :statuscode 200: no error
+    :statuscode 404: User or track not found
+
+Remove favorite
+---------------
+
+.. http:delete:: /user/(string:user_id)/favorite/(string:favorite_id)
+    :noindex:
+    :synopsis: Remove favorite
+
+    **Example request**:
+
+    .. sourcecode:: http
+
+        DELETE /artist/ab6d4b6287fc HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 
@@ -69,6 +102,6 @@ Add track to user favorite
         }
 
     :query user_id: user id
-    :query track_id: track id
+    :query favorite_id: favorite id
     :statuscode 200: no error
-    :statuscode 404: User not found
+    :statuscode 404: there's no favorite or user

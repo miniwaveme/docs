@@ -73,3 +73,88 @@ Retrieve Album
     :query album_id: album id
     :statuscode 200: no error
     :statuscode 404: there's no album
+
+Add album
+---------
+
+.. http:put:: /album
+    :noindex:
+    :synopsis: Add an album
+
+    **Example request**:
+
+    .. sourcecode:: http
+
+        PUT /album/ HTTP/1.1
+        Host: example.com
+        Accept: application/json, text/javascript
+
+        {
+            "success": true
+            "id": 4b6287rf5
+        }
+
+    :statuscode 200: no error
+
+
+Remove album
+------------
+
+.. http:delete:: /album/(string:album_id)
+    :noindex:
+    :synopsis: Remove artist
+
+    **Example request**:
+
+    .. sourcecode:: http
+
+        DELETE /album/ab6d4b6287fc HTTP/1.1
+        Host: example.com
+        Accept: application/json, text/javascript
+
+    **Example response**:
+
+    .. sourcecode:: http
+
+        HTTP/1.1 200 OK
+        Vary: Accept
+        Content-Type: text/javascript
+
+        {
+            "success": true
+        }
+
+    :query album_id: album id
+    :statuscode 200: no error
+    :statuscode 404: there's no album
+
+Update album
+------------
+
+.. http:post:: /album/(string:album_id)
+    :noindex:
+    :synopsis: Update information about an album
+
+    **Example request**:
+
+    .. sourcecode:: http
+
+        POST /album/ab6d4b6287fc HTTP/1.1
+        Host: example.com
+        Accept: application/json, text/javascript
+
+    **Example response**:
+
+    .. sourcecode:: http
+
+        HTTP/1.1 200 OK
+        Vary: Accept
+        Content-Type: text/javascript
+
+        {
+            "success": true
+        }
+
+    :query album_id: album id
+    :statuscode 200: no error
+    :statuscode 404: there's no album

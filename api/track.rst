@@ -54,9 +54,9 @@ Retrieve track
 Add track
 ---------
 
-.. http:get:: /track
+.. http:put:: /track
     :noindex:
-    :synopsis: Retrieve information about a track
+    :synopsis: Add information about a track
 
     **Example request**:
 
@@ -66,11 +66,32 @@ Add track
         Host: example.com
         Accept: application/json, text/javascript
 
+        {
+            "success": true,
+            "id": 4b6287rf5
+        }
+
+    :statuscode 200: no error
+    :statuscode 404: there's no track
+
+Update track
+------------
+
+.. http:post:: /track/(string:track_id)
+    :noindex:
+    :synopsis: Update information about a track
+
+    **Example request**:
+
+    .. sourcecode:: http
+
+        POST /track/ HTTP/1.1
+        Host: example.com
+        Accept: application/json, text/javascript
 
     :query track_id: track id
     :statuscode 200: no error
     :statuscode 404: there's no track
-
 
 Remove track
 ------------
