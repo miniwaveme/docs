@@ -4,7 +4,7 @@ Style
 Get style
 ---------
 
-.. http:get:: /style/(string:style_id)
+.. http:get:: /style/get/(string:style_id)
     :noindex:
     :synopsis: Retrieve style
 
@@ -12,7 +12,7 @@ Get style
 
     .. sourcecode:: http
 
-        GET style/ab6d4b6287fc HTTP/1.1
+        GET style/get/ab6d4b6287fc HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 

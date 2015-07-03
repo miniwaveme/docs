@@ -4,7 +4,7 @@ Artist
 Retrieve artist
 ---------------
 
-.. http:get:: /artist/(string:artist_id)
+.. http:get:: /artist/get/(string:artist_id)
     :noindex:
     :synopsis: Retrieve information about an artist
 
@@ -12,7 +12,7 @@ Retrieve artist
 
     .. sourcecode:: http
 
-        GET /artist/ab6d4b6287fc HTTP/1.1
+        GET /artist/get/ab6d4b6287fc HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 

@@ -4,7 +4,7 @@ Track
 Retrieve track
 --------------
 
-.. http:get:: /track/(string:track_id)
+.. http:get:: /track/get/(string:track_id)
     :noindex:
     :synopsis: Retrieve information about a track
 
@@ -12,7 +12,7 @@ Retrieve track
 
     .. sourcecode:: http
 
-        GET /track/ab6d4b6287fc HTTP/1.1
+        GET /track/get/ab6d4b6287fc HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 

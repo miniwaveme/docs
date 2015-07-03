@@ -4,7 +4,7 @@ Recommendation
 Get recommendations for an user
 -------------------------------
 
-.. http:get:: /recommendation/user/(string:user_id)
+.. http:get:: /user/(string:user_id)/recommendation/list
     :noindex:
     :synopsis: Retrieve user recommendations
 
@@ -12,7 +12,7 @@ Get recommendations for an user
 
     .. sourcecode:: http
 
-        GET /recommendation/user/ab6d4b6287fc HTTP/1.1
+        GET /user/ab6d4b6287fc/recommendation/list HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 

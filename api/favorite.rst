@@ -1,18 +1,18 @@
 Favorite track
 ==============
 
-Retrieve favorite user track
-----------------------------
+Retrieve favorites user track
+-----------------------------
 
-.. http:get:: /user/(string:user_id)/playlist
+.. http:get:: /user/(string:user_id)/favorite/list
     :noindex:
-    :synopsis: Retrieve user playlist
+    :synopsis: Retrieve user favorites
 
     **Example request**:
 
     .. sourcecode:: http
 
-        GET /user//playlist/ab6d4b6287fc HTTP/1.1
+        GET /user/ab6d4b6287fc/favorite/list HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 

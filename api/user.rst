@@ -4,7 +4,7 @@ User
 Retrieve user
 -------------
 
-.. http:get:: /user/(string:user_id)
+.. http:get:: /user/get/(string:user_id)
     :noindex:
     :synopsis: Retrieve information about a user
 
@@ -12,7 +12,7 @@ Retrieve user
 
     .. sourcecode:: http
 
-        GET /track/ab6d4b6287fc HTTP/1.1
+        GET /track/get/ab6d4b6287fc HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 

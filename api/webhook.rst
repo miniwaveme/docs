@@ -4,7 +4,7 @@ Webhook
 Get user webhooks
 -----------------
 
-.. http:get:: /user/(string:user_id)/webhook
+.. http:get:: /user/(string:user_id)/webhook/list
     :noindex:
     :synopsis: Retrieve user webhook
 
@@ -12,7 +12,7 @@ Get user webhooks
 
     .. sourcecode:: http
 
-        GET /user/ab6d4b6287fc/webhook HTTP/1.1
+        GET /user/ab6d4b6287fc/webhook/list HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 

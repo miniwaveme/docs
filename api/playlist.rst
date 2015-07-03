@@ -52,14 +52,13 @@ Retrieve playlist
             ],
         }
 
-    :query track_id: track id
     :statuscode 200: no error
     :statuscode 404: there's no track
 
 Retrieve user playlist
 ----------------------
 
-.. http:get:: /user/(string:user_id)/playlist
+.. http:get:: /user/(string:user_id)/playlist/list
     :noindex:
     :synopsis: Retrieve user playlist
 
@@ -67,7 +66,7 @@ Retrieve user playlist
 
     .. sourcecode:: http
 
-        GET /user//playlist/ab6d4b6287fc HTTP/1.1
+        GET /user/ab6d4b6287fc/playlist/list HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 

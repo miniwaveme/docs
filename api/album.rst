@@ -4,7 +4,7 @@ Album
 Retrieve Album
 --------------
 
-.. http:get:: /album/(string:album_id)
+.. http:get:: /album/get/(string:album_id)
     :noindex:
     :synopsis: Retrieve information about an album
 
@@ -12,7 +12,7 @@ Retrieve Album
 
     .. sourcecode:: http
 
-        GET /album/ab6d4b6287fc HTTP/1.1
+        GET /album/get/ab6d4b6287fc HTTP/1.1
         Host: example.com
         Accept: application/json, text/javascript
 
