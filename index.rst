@@ -2,6 +2,13 @@
 Welcome to MiniWaveMe documentation!
 ======================================
 
+Installation
+----------
+
+.. toctree::
+
+	installation/index
+
 Public API
 ----------
 
