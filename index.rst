@@ -3,7 +3,7 @@ Welcome to MiniWaveMe documentation!
 ======================================
 
 Installation
-----------
+------------
 
 .. toctree::
 
