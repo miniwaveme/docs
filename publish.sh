@@ -16,6 +16,7 @@ git config --global user.email 'maxime.horcholle@gmail.com'
 git config --global user.name 'mhor'
 
 touch .nojekyll
+echo "docs.miniwave.me" > CNAME
 
 git add .
 git commit -m "Build doc"
