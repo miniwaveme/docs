@@ -166,7 +166,7 @@ html_show_sourcelink = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Soclozcomdoc'
+htmlhelp_basename = 'Miniwavemedoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -185,8 +185,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Soclozcom.tex', u'Socloz.com Documentation',
-   u'CloseToMe', 'manual'),
+  ('index', 'Miniwaveme.tex', u'Miniwave.me Documentation',
+   u'MiniwaveMe', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
