@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+
+
+<html lang="">
+<head>
+    <meta charset="utf-8"/>
+    
+        <title>Album</title>
+
+    
+    <link rel="stylesheet" id="current-theme" href=".././_static/css/bootstrap.min.css"
+          type="text/css"/>
+    <link rel="stylesheet" href=".././_static/css/basicstrap.css">
+    <link rel="stylesheet" href=".././_static/css/basicstrap.css">
+    <link rel="stylesheet" href=".././_static/css/styles/default.css">
+    <link rel="stylesheet" href=".././_static/css/font-awesome.min.css">
+    <link rel="stylesheet" href=".././_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href=".././_static/css/style.css" type="text/css"/>
+    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '/index.html',
+            VERSION: '0.0.1',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src=".././_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=".././_static/js/jquery.main.js"></script>
+    <script type="text/javascript">
+    </script>
+
+</head>
+
+
+<header id="header">
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">MiniWave</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+</ul>
+<ul class="nav navbar-nav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">API</a></li>
+</ul>
+<ul class="nav navbar-nav">
+<li class="toctree-l1"><a class="reference internal" href="../plugin/index.html">Plugins</a></li>
+</ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+
+<body class="doc-page b2b-page" role="document">
+<div id="wrapper">
+    <div id="main">
+
+        <div class="row">
+            <div class="col-md-2 large-nav">
+                <nav id="leftnav" class="nav affix">
+                </nav>
+            </div>
+            <div class="col-md-8" role="">
+                
+  <div class="section" id="album">
+<h1>Album<a class="headerlink" href="#album" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="retrieve-album">
+<h2>Retrieve Album<a class="headerlink" href="#retrieve-album" title="Permalink to this headline">¶</a></h2>
+<dl class="get">
+<dt>
+<code class="descname">GET </code><code class="descname">/album/get/</code><span class="sig-paren">(</span><em class="property">string: </em><em>album_id</em><span class="sig-paren">)</span></dt>
+<dd><p><strong>Example request</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="nf">GET</span> <span class="nn">/album/get/ab6d4b6287fc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json, text/javascript</span>
+</pre></div>
+</div>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Vary</span><span class="o">:</span> <span class="l">Accept</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/javascript</span>
+
+<span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">12345</span><span class="p">,</span>
+        <span class="s2">&quot;author_id&quot;</span><span class="o">:</span> <span class="mi">123</span><span class="p">,</span>
+        <span class="s2">&quot;total_track&quot;</span><span class="o">:</span> <span class="mi">12</span><span class="p">,</span>
+        <span class="s2">&quot;format&quot;</span><span class="o">:</span> <span class="s2">&quot;ep&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;release_year&quot;</span><span class="o">:</span> <span class="s2">&quot;2014&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;release_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2014-04-28&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;web&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="s2">&quot;Domino&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cover&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;sm&quot;</span><span class="o">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;md&quot;</span><span class="o">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;lg&quot;</span><span class="o">:</span> <span class="s2">&quot;http://example.com&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;others&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;sm&quot;</span><span class="o">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;md&quot;</span><span class="o">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;lg&quot;</span><span class="o">:</span> <span class="s2">&quot;http://example.com&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;artist&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;bcfe0dc6&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Various Artist&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;track&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;ab6d4b6287fc&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="s2">&quot;track_number&quot;</span><span class="o">:</span> <span class="mi">1</span>
+                <span class="s2">&quot;duration&quot;</span><span class="o">:</span> <span class="mi">360</span>
+                <span class="s2">&quot;artist&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;bcfe0dc6&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>album_id</strong> &#8211; album id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> &#8211; no error</li>
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> &#8211; there&#8217;s no album</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="add-album">
+<h2>Add album<a class="headerlink" href="#add-album" title="Permalink to this headline">¶</a></h2>
+<dl class="put">
+<dt>
+<code class="descname">PUT </code><code class="descname">/album</code></dt>
+<dd><p><strong>Example request</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="nf">PUT</span> <span class="nn">/album/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json, text/javascript</span>
+
+<span class="p">{</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">4</span><span class="nx">b6287rf5</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> &#8211; no error</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="remove-album">
+<h2>Remove album<a class="headerlink" href="#remove-album" title="Permalink to this headline">¶</a></h2>
+<dl class="delete">
+<dt>
+<code class="descname">DELETE </code><code class="descname">/album/</code><span class="sig-paren">(</span><em class="property">string: </em><em>album_id</em><span class="sig-paren">)</span></dt>
+<dd><p><strong>Example request</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="nf">DELETE</span> <span class="nn">/album/ab6d4b6287fc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json, text/javascript</span>
+</pre></div>
+</div>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Vary</span><span class="o">:</span> <span class="l">Accept</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/javascript</span>
+
+<span class="p">{</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>album_id</strong> &#8211; album id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> &#8211; no error</li>
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> &#8211; there&#8217;s no album</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="update-album">
+<h2>Update album<a class="headerlink" href="#update-album" title="Permalink to this headline">¶</a></h2>
+<dl class="post">
+<dt>
+<code class="descname">POST </code><code class="descname">/album/</code><span class="sig-paren">(</span><em class="property">string: </em><em>album_id</em><span class="sig-paren">)</span></dt>
+<dd><p><strong>Example request</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="nf">POST</span> <span class="nn">/album/ab6d4b6287fc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json, text/javascript</span>
+</pre></div>
+</div>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Vary</span><span class="o">:</span> <span class="l">Accept</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/javascript</span>
+
+<span class="p">{</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>album_id</strong> &#8211; album id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> &#8211; no error</li>
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> &#8211; there&#8217;s no album</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

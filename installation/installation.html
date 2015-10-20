@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+
+
+<html lang="">
+<head>
+    <meta charset="utf-8"/>
+    
+        <title>Installation</title>
+
+    
+    <link rel="stylesheet" id="current-theme" href=".././_static/css/bootstrap.min.css"
+          type="text/css"/>
+    <link rel="stylesheet" href=".././_static/css/basicstrap.css">
+    <link rel="stylesheet" href=".././_static/css/basicstrap.css">
+    <link rel="stylesheet" href=".././_static/css/styles/default.css">
+    <link rel="stylesheet" href=".././_static/css/font-awesome.min.css">
+    <link rel="stylesheet" href=".././_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href=".././_static/css/style.css" type="text/css"/>
+    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '/index.html',
+            VERSION: '0.0.1',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src=".././_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=".././_static/js/jquery.main.js"></script>
+    <script type="text/javascript">
+    </script>
+
+</head>
+
+
+<header id="header">
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">MiniWave</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Installation</a></li>
+</ul>
+<ul class="nav navbar-nav">
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+</ul>
+<ul class="nav navbar-nav">
+<li class="toctree-l1"><a class="reference internal" href="../plugin/index.html">Plugins</a></li>
+</ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+
+<body class="doc-page b2b-page" role="document">
+<div id="wrapper">
+    <div id="main">
+
+        <div class="row">
+            <div class="col-md-2 large-nav">
+                <nav id="leftnav" class="nav affix">
+                </nav>
+            </div>
+            <div class="col-md-8" role="">
+                
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This project is develop with Docker and Docker Compose, for simplicity reason, but you can run him without Docker.</p>
+</div>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="software-stack">
+<h3>Software stack<a class="headerlink" href="#software-stack" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Golang: for the API code</li>
+<li>MongoDB for data storage</li>
+<li>Redis for cache</li>
+<li>ElasticSearch for data indexation and querying</li>
+</ul>
+</div>
+<div class="section" id="run-api-with-docker-compose-recommended">
+<h3>Run API with Docker Compose (recommended)<a class="headerlink" href="#run-api-with-docker-compose-recommended" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>git clone https://github.com/miniwaveme/api
+<span class="nv">$ </span><span class="nb">cd </span>api
+<span class="nv">$ </span>make cmp-pull <span class="c"># pull specified containers in docker-compose.yml</span>
+<span class="nv">$ </span>make cmp-run  <span class="c"># run containers in detatch mode</span>
+<span class="nv">$ </span>make api-run  <span class="c"># run the API</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-api-without-docker-compose">
+<h3>Run API without Docker Compose<a class="headerlink" href="#run-api-without-docker-compose" title="Permalink to this headline">¶</a></h3>
+<p>This solution can be envisaged if you need to deploy the api on a &#8216;production&#8217; server</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># first step: install all software stack (golang, mongo, redis, nodejs, elastic search...)</span>
+<span class="c"># after you can run the API</span>
+<span class="nv">$ </span>git clone https://github.com/miniwaveme/api
+<span class="nv">$ </span><span class="nb">cd </span>api
+<span class="nv">$ </span>vim config/api/config.yml <span class="c"># configure the API (mongo address, port, etc..)</span>
+<span class="nv">$ </span>go build main.go          <span class="c"># run the api</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

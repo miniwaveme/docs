@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+
+
+<html lang="">
+<head>
+    <meta charset="utf-8"/>
+    
+        <title>Webhook</title>
+
+    
+    <link rel="stylesheet" id="current-theme" href=".././_static/css/bootstrap.min.css"
+          type="text/css"/>
+    <link rel="stylesheet" href=".././_static/css/basicstrap.css">
+    <link rel="stylesheet" href=".././_static/css/basicstrap.css">
+    <link rel="stylesheet" href=".././_static/css/styles/default.css">
+    <link rel="stylesheet" href=".././_static/css/font-awesome.min.css">
+    <link rel="stylesheet" href=".././_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href=".././_static/css/style.css" type="text/css"/>
+    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '/index.html',
+            VERSION: '0.0.1',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src=".././_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=".././_static/js/jquery.main.js"></script>
+    <script type="text/javascript">
+    </script>
+
+</head>
+
+
+<header id="header">
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">MiniWave</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+</ul>
+<ul class="nav navbar-nav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">API</a></li>
+</ul>
+<ul class="nav navbar-nav">
+<li class="toctree-l1"><a class="reference internal" href="../plugin/index.html">Plugins</a></li>
+</ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+
+
+<body class="doc-page b2b-page" role="document">
+<div id="wrapper">
+    <div id="main">
+
+        <div class="row">
+            <div class="col-md-2 large-nav">
+                <nav id="leftnav" class="nav affix">
+                </nav>
+            </div>
+            <div class="col-md-8" role="">
+                
+  <div class="section" id="webhook">
+<h1>Webhook<a class="headerlink" href="#webhook" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="get-user-webhooks">
+<h2>Get user webhooks<a class="headerlink" href="#get-user-webhooks" title="Permalink to this headline">¶</a></h2>
+<dl class="get">
+<dt>
+<code class="descname">GET </code><code class="descname">/user/</code><span class="sig-paren">(</span><em class="property">string: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/webhook/list</code></dt>
+<dd><p><strong>Example request</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="nf">GET</span> <span class="nn">/user/ab6d4b6287fc/webhook/list</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json, text/javascript</span>
+</pre></div>
+</div>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Vary</span><span class="o">:</span> <span class="l">Accept</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/javascript</span>
+
+<span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;ab6d4b6287fc&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Name&quot;</span><span class="o">:</span> <span class="s2">&quot;Webhook 1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;event&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Track played&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;d4b62ab687fc&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://exemple.com/ttt&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;parameters&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;track&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;played_track.name&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;d4b62ab687fc&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Name&quot;</span><span class="o">:</span> <span class="s2">&quot;Webhook 2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;event&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;User connection&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;d4b6fc2ab687&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://exemple.com/user_logged&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;parameters&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="s2">&quot;user.name&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>user_id</strong> &#8211; user id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> &#8211; no error</li>
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> &#8211; there&#8217;s no favorite</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="remove-user-webhooks">
+<h2>Remove user webhooks<a class="headerlink" href="#remove-user-webhooks" title="Permalink to this headline">¶</a></h2>
+<dl class="delete">
+<dt>
+<code class="descname">DELETE </code><code class="descname">/user/</code><span class="sig-paren">(</span><em class="property">string: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/webhook/</code><span class="sig-paren">(</span><em class="property">string: </em><em>webhook_id</em><span class="sig-paren">)</span></dt>
+<dd><p><strong>Example request</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="nf">DELETE</span> <span class="nn">/user/ab6d4b6287fc/webhook/6d4abbc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json, text/javascript</span>
+</pre></div>
+</div>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Vary</span><span class="o">:</span> <span class="l">Accept</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/javascript</span>
+
+<span class="p">{</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>user_id</strong> &#8211; user id</li>
+<li><strong>webhook_id</strong> &#8211; webhook id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> &#8211; no error</li>
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> &#8211; there&#8217;s no webhook</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="add-user-webhooks">
+<h2>Add user webhooks<a class="headerlink" href="#add-user-webhooks" title="Permalink to this headline">¶</a></h2>
+<dl class="put">
+<dt>
+<code class="descname">PUT </code><code class="descname">/user/</code><span class="sig-paren">(</span><em class="property">string: </em><em>user_id</em><span class="sig-paren">)</span><code class="descname">/webhook/</code><span class="sig-paren">(</span><em class="property">string: </em><em>webhook_id</em><span class="sig-paren">)</span></dt>
+<dd><p><strong>Example request</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="nf">PUT</span> <span class="nn">/user/ab6d4b6287fc/webhook/6d4abbc</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json, text/javascript</span>
+</pre></div>
+</div>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-http"><div class="highlight"><pre><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Vary</span><span class="o">:</span> <span class="l">Accept</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/javascript</span>
+
+<span class="p">{</span>
+    <span class="s2">&quot;success&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="nx">d4b62</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first simple">
+<li><strong>user_id</strong> &#8211; user id</li>
+<li><strong>webhook_id</strong> &#8211; webhook id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status Codes:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> &#8211; no error</li>
+<li><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 Not Found</a> &#8211; there&#8217;s no webhook</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

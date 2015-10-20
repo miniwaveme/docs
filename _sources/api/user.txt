@@ -1,0 +1,39 @@
+User
+====
+
+Retrieve user
+-------------
+
+.. http:get:: /user/get/(string:user_id)
+    :noindex:
+    :synopsis: Retrieve information about a user
+
+    **Example request**:
+
+    .. sourcecode:: http
+
+        GET /track/get/ab6d4b6287fc HTTP/1.1
+        Host: example.com
+        Accept: application/json, text/javascript
+
+    **Example response**:
+
+    .. sourcecode:: http
+
+        HTTP/1.1 200 OK
+        Vary: Accept
+        Content-Type: text/javascript
+
+        {
+            "id": "ab6d4b6287fc",
+            "nickname": "mhor",
+            "email": "maxime.horcholle@gmail.com",
+            "gender": "male",
+            "birthdate": "1987-05-18",
+            "firstname": "maxime",
+            "lastname": "horcholle"
+        }
+
+    :query user_id: user id
+    :statuscode 200: no error
+    :statuscode 404: there's no user
