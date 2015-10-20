@@ -14,7 +14,7 @@ before_install:
   - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
 
 script:
-    - sphinx-build -nW -b html -d _build/doctrees . _build/html
+    - make html
 
 after_success:
   - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh publish.sh; fi
