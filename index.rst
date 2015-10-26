@@ -1,6 +1,6 @@
 
 Welcome to MiniWaveMe documentation!
-======================================
+====================================
 
 Installation
 ------------

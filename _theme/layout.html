@@ -73,7 +73,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="navbar-right">
-                {{ toctree()|
+                {{ toctree(maxdepth=1)|
                     replace("<ul>", "<ul class=\"nav navbar-nav\">")|
                     replace("<ul class=\"current\">", "<ul class=\"nav active navbar-nav\">")|
                     replace("<li class=\"toctree-l1 current\">", "<li class=\"toctree-l1 active\">")
